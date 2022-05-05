@@ -3,7 +3,6 @@ import styles from './Game.module.css'
 
 import GameOption from '../gameOption/GameOption'
 import GameInfo from '../gameinfo/GameInfo'
-import Score from '../score/Score'
 
 const winnerTable = [
     [0, 1, 2],
@@ -23,7 +22,7 @@ function Game() {
     const [draw, setDraw] = useState(false)
 
 const handleClick = (pos) => {
-    if(gameState[pos]===0 && winner === 0){
+    if(gameState[pos]=== 0 && winner === 0){
         let newGameSatate = [...gameState]
         newGameSatate[pos] = currentPlayer
         setGameState(newGameSatate)
@@ -82,7 +81,6 @@ useEffect (() => {
          draw = {draw}
          />
         </div>
-        <Score />
         </>
     )
 }
